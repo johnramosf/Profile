@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    height: 70svh;
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  color: #1b1b1b;
+}
+h2 {
+    font-size:1.8em;
+    color: #777;
+}
+p{
+    font-size: 1.3em;
+    color: #111;
+}
+#header{
+ display: flex;  
+ height: 90px;
+ padding: 0 6em;
+ position: fixed;
+ box-shadow: 0 4px 8px 4px #efefef; 
+ background-color:#fff;
+ width: calc(100% -16em);
+} 
+
+.header-brand {
+    width: 20%;
+    height: auto;
+    padding-top: 1.55em;
+}
+.header-brand h3{
+  font-size: 1.4em;
+  margin: 0;
+  color: #07080f; 
+}
+
+.header-menu {
+    width: 80%;
+    padding-top: 1.7em;
+    text-align: end;
+}
+
+.header-menu a {
+ color: #4a4a4a;
+ font-size: 1.2em;
+ text-decoration: none;   
+}
+/*End of header section*/
+/*heroe section*/
+#hero {
+  max-height: 900px;
+  display: flex;
+  padding-top: 10em;
+}
+
+.img-container {
+   min-width: 400px;
+   min-height: 400px;
+   max-width:500px;
+   max-height: 500px;
+   padding-left: 10em;
+}
+.profile {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    clip-path: circle(40%);
+    transition: 0.3s;
+    /*filter: drop-shadow(500px 100px 40px #4444dd);*/
+}
+
+.profile:hover {
+  clip-path: circle(50%);
+} 
+
+.info {
+  padding-top: 5em;
+  max-width: 650px;
+}
+/*projects section*/
+#projects {
+  width: 100%;
+  font-family: "Karla", sans-serif;
+  padding-left: 2em;
+  margin-bottom: 3em;
+}
+
+  /*End of heroe section*/
+
+  /*about section*/
+  #about {
+    height: 8svh;
+    padding: 4em 2em;
+    background-color: #eaeaea;
+  }
+
+  #about h2 {
+   color: eaeaea;  
+  }
+
+ .skills {
+  display: flex;
+ } 
+
+ .skills img {
+   width: auto;
+   height: 40px;
+   filter: brightness(0);
+   margin: 8px;
+   transition: .2s;
+ }
+
+ .skills img:hover {
+   filter: brightness(1);
+ }
+
+
+/* end of about section   */
+/*  Responsive */
+@media screen and (max-width:650px) and (orientation: portrait){
+  #header {
+    padding: 0 3em;
+    width: calc(100% - 8em);
+  }
+  .header-brand {
+    width: 40%;
+  }
+  .header-menu {
+    width: 60%;
+    padding-left: 2em; 
+  }
+  #hero {
+    flex-direction: column;
+  }
+  .img-container {
+    /*min-height: 400px;
+    min-width: 400px;
+    padding-left: 11svw;*/
+    min-height: unset;
+    min-width: unset;
+    width:100%;
+    padding: 0;  }
+    .profile{
+    margin: 0 10px;
+    }
+  .info{
+    padding-top: 0;
+    padding-left: 2em; 
+  }
+  #about {
+    height: 10svh;
+  }
+
+}
